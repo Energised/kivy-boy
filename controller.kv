@@ -1,0 +1,23 @@
+#:kivy 1.0
+
+<Controller>:
+    label_wid: my_custom_label
+
+    canvas:
+        Color:
+            rgb: 1,1,1
+        Rectangle:
+            source: 'img/pipboy.png'
+            size: self.size
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        Button:
+            text: 'My controller info is: ' + root.info
+            on_press: root.do_action()
+
+        Label:
+            id: my_custom_label
+            text: 'Label before button press'
